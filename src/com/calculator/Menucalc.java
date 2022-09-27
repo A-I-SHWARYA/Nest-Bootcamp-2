@@ -38,8 +38,14 @@ public class Menucalc {
                     break;
 
                 case 4:
-                    result=x/y;
-                    System.out.println(result);
+                    try {
+                        result = x / y;
+                        System.out.println(result);
+                    }
+                    catch (ArithmeticException e)
+                    {
+                        System.out.println("Division by zero not possible");
+                    }
                     break;
                 case 5:
                     System.exit(0);
